@@ -1,9 +1,10 @@
+version: '3'
+
 services:
   streamlit:
-    build: 
-      dockerfile: /Dockerfile
-      context: ./
-      web:
-        image: alenapoc.azurecr.io/open-ended:v1
-        ports: 
-          - "8081:8501"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: <acr-name>.azurecr.io/<repository-name>:<tag>
+    ports:
+      - "8081:8501"
