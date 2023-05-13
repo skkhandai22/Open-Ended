@@ -3,5 +3,7 @@ services:
     build: 
       dockerfile: /Dockerfile
       context: ./
-    ports:
-      - "8081:8501"
+      web:
+        image: alenapoc.azurecr.io/open-ended:v1
+        ports: 
+          - "8081:8501"
